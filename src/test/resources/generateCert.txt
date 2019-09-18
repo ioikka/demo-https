@@ -1,0 +1,4 @@
+#create keystore
+keytool -genkey -keyalg RSA -alias localhost -keystore localhost.jks -storepass password -validity 360 -keysize 2048 -ext san=dns:localhost
+#export certificate from keystore
+keytool -export -alias localhost -file localhost.cer -keystore localhost.jks
